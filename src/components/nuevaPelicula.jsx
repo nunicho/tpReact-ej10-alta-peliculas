@@ -102,7 +102,7 @@ class NuevaPelicula extends Component {
 
                         
                         <div className="form-group row">
-                            <label className="col-sm-4 col-lg-2 col-form-label">Genero</label>
+                            <label className="col-sm-4 col-lg-2 col-form-label">Género</label>
                             <div className="col-sm-8 col-lg-10">
                                 <select 
                                     type="text"
@@ -146,7 +146,7 @@ class NuevaPelicula extends Component {
                         </div>
 
                         <div className="form-group row">
-                            <label className="col-sm-4 col-lg-2 col-form-label">Descripcion</label>
+                            <label className="col-sm-4 col-lg-2 col-form-label">Descripción</label>
                             <div className="col-sm-8 col-lg-10">
                                 <textarea
                                     type="text"
