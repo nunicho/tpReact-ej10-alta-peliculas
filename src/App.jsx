@@ -4,14 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/header';
 import NuevaPelicula from './components/nuevaPelicula';
 import ListaPeliculas from './components/listaPeliculas';
+import './App.css'
 
 class App extends Component {
   state ={
     peliculas: []    
 
   }
-
-//CUANDO LA APLICACION CARGA
     componentDidMount(){
       const peliculasLS = localStorage.getItem('peliculas');
       if(peliculasLS){
@@ -21,32 +20,31 @@ class App extends Component {
       }
     }
 
-  // CUANDO ELEMINAMOS O AGREGAMOS UNA NUEVA CITA
 
   componentDidUpdate(){
     localStorage.setItem('peliculas', JSON.stringify(this.state.peliculas))
   }
 
   crearNuevaPelicula = datos => {
-    //COPIAR EL STATE ACTUAL
+
     const peliculas = [...this.state.peliculas, datos]
 
-    // AGREGAR EL NUEVO STATE
+
 
     this.setState({
       peliculas: peliculas
     })
   }
 
-    //ELIMINA LAS CITAS DEL STATE
+
       eliminarPelicula = id =>{
-        //HACER UNA COPIA DEL STATE
+    
           const peliculasActuales = [...this.state.peliculas]
 
-        //UTILIZAR FILTER PARA SACAR EL ELEMENTO ID DEL ARRAY
+        
         const peliculas = peliculasActuales.filter(pelicula => pelicula.id !== id);
 
-        //ACTUALIZAR EL STATE
+        
         this.setState({
           peliculas
         })
@@ -55,7 +53,7 @@ class App extends Component {
 
   render(){
     return (
-      <div className="container">
+      <div className="container fondoPrincipal">
         <Header
         titulo='Administrador de Películas'
         />
