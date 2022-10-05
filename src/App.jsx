@@ -11,7 +11,7 @@ class App extends Component {
 
   }
 
-  //CUANDO LA APLICACION CARGA
+//CUANDO LA APLICACION CARGA
     componentDidMount(){
       const peliculasLS = localStorage.getItem('peliculas');
       if(peliculasLS){
@@ -57,7 +57,7 @@ class App extends Component {
     return (
       <div className="container">
         <Header
-        titulo='Administrador de Peliculas'
+        titulo='Administrador de Películas'
         />
         <div className="row">
           <div className="col-md-10 mx-auto">

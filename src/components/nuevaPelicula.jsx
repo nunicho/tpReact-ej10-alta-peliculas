@@ -78,7 +78,7 @@ class NuevaPelicula extends Component {
             <div className="card mt-5 py-5">
                 <div className="card-body">
                     <h2 className="card-title text-center mb-5">
-                        Llena el formulario para crear una nueva pelicula
+                        Crea una nuevo registro para una película
                     </h2>
 
                     {error ? <div className="alert alert-danger mt-2 mb-5 text-center"> ¡¡Todos los campos son obligatorios!!</div> : null}
@@ -92,7 +92,7 @@ class NuevaPelicula extends Component {
                                 <input 
                                     type="text"
                                     className="form-control"
-                                    placeholder="Nombre Pelicula"
+                                    placeholder="Título de la película"
                                     name="titulo"
                                     onChange={this.handleChange}
                                     value={this.state.pelicula.titulo}
@@ -151,7 +151,7 @@ class NuevaPelicula extends Component {
                                 <textarea
                                     type="text"
                                     className="form-control"
-                                    placeholder="Escribe la descripcion"
+                                    placeholder="Ingresa una descripción"
                                     name="descripcion"
                                     onChange={this.handleChange}
                                     value={this.state.pelicula.descripcion}
